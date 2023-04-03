@@ -9,7 +9,8 @@ gem "sprockets-rails"
 
 gem "sqlite3", "~> 1.4"
 
-gem "puma", "~> 5.0"
+# gem "puma", "~> 5.0"
+gem "unicorn"
 
 gem "importmap-rails"
 
