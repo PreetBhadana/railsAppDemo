@@ -3,6 +3,8 @@ app_dir = File.expand_path("/home/ubuntu/projects/railsAppDemo", __FILE__)
 shared_dir = "#{app_dir}/shared"
 working_directory app_dir
 
+pid "#{app_dir}/tmp/pids/unicorn.pid"
+
 # Set unicorn options
 worker_processes 2
 preload_app true
