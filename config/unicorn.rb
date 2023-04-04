@@ -3,7 +3,6 @@ app_dir = File.expand_path("/home/ubuntu/projects/railsAppDemo", __FILE__)
 shared_dir = "#{app_dir}/shared"
 working_directory app_dir
 
-pid "#{app_dir}/tmp/pids/unicorn.pid"
 
 # Set unicorn options
 worker_processes 2
@@ -11,7 +10,7 @@ preload_app true
 timeout 30
 
 # Path for the Unicorn socket
-listen "#{app_dir}/tmp/sockets/unicorn.sock", :backlog => 64
+listen "#{shared_dir}/sockets/unicorn.sock", :backlog => 64
 
 # Set path for logging
 stderr_path "#{shared_dir}/log/unicorn.stderr.log"
